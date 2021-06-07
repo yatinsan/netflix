@@ -1,5 +1,5 @@
 .banner {
-    background-image: url('https://static.toiimg.com/photo/76617792.cms');
+    /* background-image: url('https://static.toiimg.com/photo/76617792.cms'); */
     background-size: cover;
     height: 500px;
     width: 100%;
@@ -39,6 +39,9 @@
 
 .discription {
     max-width: 360px;
+    max-height: 100px;
+    line-height: 1.5;
+    overflow-y: hidden;
 }
 
 .fade {
