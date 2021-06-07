@@ -1,0 +1,47 @@
+.banner {
+    background-image: url('https://static.toiimg.com/photo/76617792.cms');
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.content {
+    padding-top: 200px;
+    padding-left: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.buttons button {
+    border: none;
+    background-color: #77777779;
+    outline: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 10px;
+}
+
+.buttons button:hover {
+    color: black;
+    background-color: #ffffffe3;
+    transition: 0.5s;
+}
+
+.discription {
+    max-width: 360px;
+}
+
+.fade {
+    height: 150px;
+    background-image: linear-gradient(180deg, transparent, #111);
+}
