@@ -10,8 +10,8 @@ function Banner() {
         const [num, setnum] = useState(1)
     useEffect(() => {
         axio.get(`/trending/movie/day?api_key=${API_KEY}`).then((data)=>{
-            console.log(data.data.results[1])
-            setbanner(data.data.results[1])
+            console.log(Math.floor(Math.random() * 10))
+            setbanner(data.data.results[Math.floor(Math.random() * 10)])
             
         })
         
