@@ -7,29 +7,23 @@ import './Banner.css'
 
 function Banner() {
         const [banner, setbanner] = useState('')
-        const [num, setnum] = useState(1)
     useEffect(() => {
         axio.get(`/trending/movie/day?api_key=${API_KEY}`).then((data)=>{
-            console.log(Math.floor(Math.random() * 10))
-            setbanner(data.data.results[Math.floor(Math.random() * 10)])
+            // setbanner(data.data)
+            setbanner(data.data.results[Math.floor(Math.random() * 20)])
             
         })
         
     }, [])
 
-    const chnum=()=>{
-        setnum(num + 1)
-        axio.get(`/trending/movie/day?api_key=${API_KEY}`).then((data)=>{setbanner(data.data.results[num])})
-        
-    }
-
+    
     return (
-        <div style={{backgroundImage:`url(${imageurl+banner.backdrop_path})`}} className="banner">
+        <div style={banner?{backgroundImage:`url(${imageurl+banner.backdrop_path})`}:null} className="banner">
             <div className="content">
                 <h1 className="title">{banner.title}</h1>
                 <div className="buttons">
-                    <button>PLAY</button>
-                    <button onClick={chnum}>watch list</button>
+                    <button onClick={()=>{console.log(banner)}}>PLAY</button>
+                    <button>watch list</button>
                 </div>
                 <p className='discription'>{banner.overview}</p>
             </div>
